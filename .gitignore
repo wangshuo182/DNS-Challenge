@@ -1,3 +1,4 @@
+.gitignore
 datasets/
 datasets_fullband/
 training_set/
@@ -17,3 +18,5 @@ __pycache__/
 *.wav
 *.tar.bz2
 *.zip
+.DS_*
+._*
