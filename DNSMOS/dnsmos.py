@@ -15,7 +15,7 @@ from urllib.parse import urlparse, urljoin
 SCORING_URI_DNSMOS = 'https://dnsmos.azurewebsites.net/score'
 SCORING_URI_DNSMOS_P835 = 'https://dnsmos.azurewebsites.net/v1/dnsmosp835/score'
 # If the service is authenticated, set the key or token
-AUTH_KEY = '<Insert the key we provide in email here>'
+AUTH_KEY = 'aW9hLWFjLWNuOmRuc21vcw=='
 
 
 # Set the content type
