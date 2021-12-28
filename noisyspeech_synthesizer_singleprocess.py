@@ -172,24 +172,24 @@ def main_gen(params):
             gen_audio(True, params, clean_index)
 
         # add reverb with selected RIR
-        rir_index = random.randint(0,len(params['myrir'])-1)
+        # rir_index = random.randint(0,len(params['myrir'])-1)
         
-        my_rir = os.path.normpath(os.path.join('datasets', 'impulse_responses', params['myrir'][rir_index]))
-        (fs_rir,samples_rir) = wavfile.read(my_rir)
+        # my_rir = os.path.normpath(os.path.join('datasets', 'impulse_responses', params['myrir'][rir_index]))
+        # (fs_rir,samples_rir) = wavfile.read(my_rir)
 
-        my_channel = int(params['mychannel'][rir_index])
+        # my_channel = int(params['mychannel'][rir_index])
         
-        if samples_rir.ndim==1:
-            samples_rir_ch = np.array(samples_rir)
+        # if samples_rir.ndim==1:
+        #     samples_rir_ch = np.array(samples_rir)
             
-        elif my_channel > 1:
-            samples_rir_ch = samples_rir[:, my_channel -1]
-        else:
-            samples_rir_ch = samples_rir[:, my_channel -1]
-            #print(samples_rir.shape)
-            #print(my_channel)
+        # elif my_channel > 1:
+        #     samples_rir_ch = samples_rir[:, my_channel -1]
+        # else:
+        #     samples_rir_ch = samples_rir[:, my_channel -1]
+        #     #print(samples_rir.shape)
+        #     #print(my_channel)
 
-        clean = add_pyreverb(clean, samples_rir_ch)
+        # clean = add_pyreverb(clean, samples_rir_ch)
 
         # generate noise
         noise, noise_sf, noise_cf, noise_laf, noise_index = \
